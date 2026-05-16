@@ -16,20 +16,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/oferta/page.js"
     ],
-    "/o-mnie/page": [
+    "/kontakt/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/o-mnie/page.js"
+      "static/chunks/app/kontakt/page.js"
     ],
     "/ciekawostki/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/ciekawostki/page.js"
     ],
-    "/kontakt/page": [
+    "/ciekawostki/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/kontakt/page.js"
+      "static/chunks/app/ciekawostki/[slug]/page.js"
+    ],
+    "/o-mnie/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/o-mnie/page.js"
     ]
   }
 }

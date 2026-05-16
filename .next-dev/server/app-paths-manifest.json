@@ -1,7 +1,8 @@
 {
-  "/oferta/page": "app/oferta/page.js",
   "/page": "app/page.js",
-  "/o-mnie/page": "app/o-mnie/page.js",
+  "/oferta/page": "app/oferta/page.js",
+  "/kontakt/page": "app/kontakt/page.js",
   "/ciekawostki/page": "app/ciekawostki/page.js",
-  "/kontakt/page": "app/kontakt/page.js"
+  "/ciekawostki/[slug]/page": "app/ciekawostki/[slug]/page.js",
+  "/o-mnie/page": "app/o-mnie/page.js"
 }
