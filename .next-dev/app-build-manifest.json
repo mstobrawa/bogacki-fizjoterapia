@@ -16,35 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/kontakt/page.js"
     ],
-    "/admin/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin/page.js"
-    ],
-    "/admin/oferta/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/admin/oferta/page.js"
-    ],
-    "/admin/ciekawostki/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/admin/ciekawostki/page.js"
-    ],
-    "/admin/certyfikaty/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/admin/certyfikaty/page.js"
-    ],
-    "/oferta/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/oferta/page.js"
-    ],
-    "/prywatnosc/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/prywatnosc/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

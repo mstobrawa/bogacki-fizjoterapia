@@ -1,29 +1,34 @@
-import { Calendar, ExternalLink } from "lucide-react";
+import { Calendar, ExternalLink, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
+export const phoneHref = "tel:+48123456789";
 export const znanyLekarzUrl =
   "https://www.znanylekarz.pl/piotr-bogacki-4/fizjoterapeuta/katowice";
 
 type BookingCtasProps = {
   className?: string;
-  primaryLabel?: string;
+  bookingLabel?: string;
 };
 
-export function BookingCtas({ className = "", primaryLabel = "Umów wizytę" }: BookingCtasProps) {
+export function BookingCtas({ className = "", bookingLabel = "Umów wizytę" }: BookingCtasProps) {
   return (
-    <div className={`flex flex-col gap-3 sm:flex-row ${className}`}>
-      <Button href="/kontakt" className="gap-2 px-7">
+    <div className={`flex flex-col gap-3 sm:flex-row sm:flex-wrap ${className}`}>
+      <Button href={phoneHref} className="gap-2 px-7">
+        <Phone size={18} />
+        Zadzwoń
+      </Button>
+      <Button href="/kontakt" variant="secondary" className="gap-2 px-7">
         <Calendar size={18} />
-        {primaryLabel}
+        {bookingLabel}
       </Button>
       <Button
         href={znanyLekarzUrl}
         target="_blank"
         rel="noreferrer"
-        variant="secondary"
-        className="gap-2 px-7"
+        variant="ghost"
+        className="gap-2 border border-[var(--color-primary)]/18 bg-[var(--color-surface)]/70 px-6 font-semibold shadow-sm hover:-translate-y-0.5 hover:border-[var(--color-accent)]/45 hover:bg-[var(--color-primary)]/6 hover:text-[var(--color-primary-hover)] hover:shadow-[var(--shadow-soft)]"
       >
-        <ExternalLink size={17} />
+        <ExternalLink size={16} className="shrink-0" />
         ZnanyLekarz
       </Button>
     </div>

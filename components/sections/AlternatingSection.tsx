@@ -1,6 +1,4 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
-import { znanyLekarzUrl } from "@/components/sections/BookingCtas";
-import { Button } from "@/components/ui/Button";
+import { BookingCtas } from "@/components/sections/BookingCtas";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 type AlternatingSectionProps = {
@@ -48,16 +46,7 @@ export function AlternatingSection({
           </p>
         ) : null}
         {cta ? (
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href={cta.href} className="gap-2">
-              {cta.label}
-              <ArrowRight size={17} />
-            </Button>
-            <Button href={znanyLekarzUrl} target="_blank" rel="noreferrer" variant="secondary" className="gap-2">
-              ZnanyLekarz
-              <ExternalLink size={16} />
-            </Button>
-          </div>
+          <BookingCtas className="mt-8" bookingLabel={cta.label} />
         ) : null}
       </div>
       <div className={reverse ? "lg:order-1" : ""}>

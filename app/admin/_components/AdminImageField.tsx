@@ -7,9 +7,10 @@ type AdminImageFieldProps = {
   label: string;
   currentUrl?: string | null;
   required?: boolean;
+  previewClassName?: string;
 };
 
-export function AdminImageField({ name, label, currentUrl, required }: AdminImageFieldProps) {
+export function AdminImageField({ name, label, currentUrl, required, previewClassName }: AdminImageFieldProps) {
   const [preview, setPreview] = useState(currentUrl ?? "");
 
   useEffect(() => {
@@ -23,7 +24,10 @@ export function AdminImageField({ name, label, currentUrl, required }: AdminImag
         <img
           src={preview}
           alt=""
-          className="aspect-[4/3] w-full rounded-[1.25rem] border border-[var(--color-border)] object-cover"
+          className={
+            previewClassName ??
+            "aspect-[4/3] w-full rounded-[1.25rem] border border-[var(--color-border)] object-cover"
+          }
         />
       ) : null}
       <input

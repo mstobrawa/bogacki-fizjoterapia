@@ -91,13 +91,15 @@ export function DeleteForm({
   action,
   id,
   storagePath = "",
+  className = "mt-3",
 }: {
   action: (formData: FormData) => Promise<void>;
   id: string;
   storagePath?: string;
+  className?: string;
 }) {
   return (
-    <form action={action} className="mt-3">
+    <form action={action} className={className}>
       <input type="hidden" name="id" value={id} />
       <input type="hidden" name="storage_path" value={storagePath} />
       <button
