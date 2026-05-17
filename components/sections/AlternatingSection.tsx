@@ -11,6 +11,7 @@ type AlternatingSectionProps = {
     href: string;
   };
   eyebrow?: string;
+  price?: string | null;
 };
 
 export function AlternatingSection({
@@ -19,6 +20,7 @@ export function AlternatingSection({
   imagePosition = "right",
   cta,
   eyebrow,
+  price,
 }: AlternatingSectionProps) {
   const reverse = imagePosition === "left";
 
@@ -37,6 +39,11 @@ export function AlternatingSection({
         <p className="mt-6 text-base leading-8 text-[var(--color-text-muted)] sm:text-lg">
           {description}
         </p>
+        {price ? (
+          <p className="mt-6 inline-flex rounded-full border border-[var(--color-border)] bg-white px-5 py-2 text-sm font-semibold text-[var(--color-primary)] shadow-sm">
+            {price}
+          </p>
+        ) : null}
         {cta ? (
           <div className="mt-8">
             <Button href={cta.href} variant="secondary" className="gap-2">

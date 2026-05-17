@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/layout/Section";
-import { services } from "@/lib/content";
+import { getServices } from "@/lib/cms";
 
-export function ServicesPreview() {
+export async function ServicesPreview() {
+  const services = await getServices();
+
   return (
     <Section tone="surface">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -39,6 +41,11 @@ export function ServicesPreview() {
               <h3 className="text-xl font-semibold text-[var(--color-primary)]">{service.title}</h3>
               <ArrowRight className="mt-1 shrink-0 text-[var(--color-accent)] transition group-hover:translate-x-1" size={20} />
             </div>
+            {service.price ? (
+              <p className="mt-3 inline-flex rounded-full bg-[var(--color-surface)] px-4 py-2 text-sm font-semibold text-[var(--color-primary)]">
+                {service.price}
+              </p>
+            ) : null}
             <p className="mt-4 max-w-xl text-sm leading-7 text-[var(--color-text-muted)]">
               {service.description}
             </p>

@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/oferta/page.js"
     ],
-    "/kontakt/page": [
+    "/admin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/kontakt/page.js"
+      "static/chunks/app/admin/page.js"
     ],
     "/ciekawostki/page": [
       "static/chunks/webpack.js",
@@ -31,10 +31,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/ciekawostki/[slug]/page.js"
     ],
-    "/o-mnie/page": [
+    "/admin/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/o-mnie/page.js"
+      "static/chunks/app/admin/login/page.js"
+    ],
+    "/kontakt/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/kontakt/page.js"
     ]
   }
 }

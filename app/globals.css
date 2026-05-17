@@ -27,10 +27,12 @@
 }
 
 html {
+  min-height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
   background:
     radial-gradient(
@@ -43,6 +45,11 @@ body {
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 a {

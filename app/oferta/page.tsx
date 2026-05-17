@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/Section";
 import { AlternatingSection } from "@/components/sections/AlternatingSection";
-import { services } from "@/lib/content";
+import { getServices } from "@/lib/cms";
 
 export const metadata: Metadata = {
   title: "Oferta",
   description: "Rehabilitacja, fizjoterapia, kinesiotaping, masaż relaksacyjny i oferta dla firm w Katowicach.",
 };
 
-export default function OfferPage() {
+export default async function OfferPage() {
+  const services = await getServices();
+
   return (
     <>
       <Section>
@@ -30,6 +32,7 @@ export default function OfferPage() {
             eyebrow={`0${index + 1}`}
             title={service.title}
             description={service.description}
+            price={service.price}
             imagePosition={index % 2 ? "left" : "right"}
             cta={{ label: "Zapytaj o wizytę", href: "/kontakt" }}
           />

@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/layout/Section";
-import { posts } from "@/lib/content";
+import { createExcerpt, getPublishedPosts } from "@/lib/cms";
 
 export const metadata: Metadata = {
   title: "Ciekawostki",
   description: "Artykuły i porady fizjoterapeutyczne przygotowane pod przyszłą integrację CMS.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getPublishedPosts();
+
   return (
     <Section>
       <div className="max-w-3xl">
@@ -25,16 +27,23 @@ export default function BlogPage() {
           <Link
             key={post.slug}
             href={`/ciekawostki/${post.slug}`}
-            className="group rounded-[1.75rem] border border-[var(--color-border)] bg-white p-6 shadow-[var(--shadow-card)] ring-1 ring-[var(--color-primary)]/5 transition duration-300 ease-[var(--ease-premium)] hover:-translate-y-1 hover:border-[var(--color-primary)]/45 hover:shadow-[var(--shadow-premium)]"
+            className="group overflow-hidden rounded-[1.75rem] border border-[var(--color-border)] bg-white shadow-[var(--shadow-card)] ring-1 ring-[var(--color-primary)]/5 transition duration-300 ease-[var(--ease-premium)] hover:-translate-y-1 hover:border-[var(--color-primary)]/45 hover:shadow-[var(--shadow-premium)]"
           >
-            <p className="text-sm text-[var(--color-text-muted)]">
-              {new Intl.DateTimeFormat("pl-PL").format(new Date(post.date))}
-            </p>
-            <h2 className="mt-4 text-xl font-semibold text-[var(--color-primary)]">{post.title}</h2>
-            <p className="mt-4 text-sm leading-7 text-[var(--color-text-muted)]">{post.excerpt}</p>
-            <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] group-hover:text-[var(--color-primary-hover)]">
-              Czytaj dalej <ArrowRight className="transition group-hover:translate-x-1" size={17} />
-            </span>
+            {post.image_url ? (
+              <img src={post.image_url} alt="" className="aspect-[4/3] w-full object-cover" />
+            ) : null}
+            <div className="p-6">
+              <p className="text-sm text-[var(--color-text-muted)]">
+                {new Intl.DateTimeFormat("pl-PL").format(new Date(post.created_at ?? Date.now()))}
+              </p>
+              <h2 className="mt-4 text-xl font-semibold text-[var(--color-primary)]">{post.title}</h2>
+              <p className="mt-4 text-sm leading-7 text-[var(--color-text-muted)]">
+                {createExcerpt(post.content, post.excerpt)}
+              </p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] group-hover:text-[var(--color-primary-hover)]">
+                Czytaj dalej <ArrowRight className="transition group-hover:translate-x-1" size={17} />
+              </span>
+            </div>
           </Link>
         ))}
       </div>

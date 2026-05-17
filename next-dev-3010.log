@@ -1,0 +1,14 @@
+   ▲ Next.js 15.5.16
+   - Local:        http://127.0.0.1:3010
+   - Network:      http://127.0.0.1:3010
+
+ ✓ Starting...
+ ✓ Ready in 2.8s
+ ○ Compiling / ...
+ ✓ Compiled / in 2.6s (775 modules)
+ HEAD / 200 in 3344ms
+   Reload env: .env.local
+ ✓ Compiled in 1380ms (275 modules)
+   Reload env: .env.local
+ ✓ Compiled in 2.9s (275 modules)
+ ✓ Compiled in 637ms (275 modules)

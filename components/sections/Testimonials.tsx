@@ -21,8 +21,8 @@ const testimonials = [
 ];
 
 export function Testimonials() {
-  const [emblaRef] = useEmblaCarousel({ loop: true, align: "start", dragFree: true }, [
-    Autoplay({ delay: 4600, stopOnInteraction: true }),
+  const [emblaRef] = useEmblaCarousel({ loop: true, align: "start", dragFree: false, slidesToScroll: 1 }, [
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
 
   return (

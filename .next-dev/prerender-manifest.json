@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/ciekawostki/bol-plecow-przy-pracy-siedzacej":{},"/ciekawostki/kiedy-warto-wybrac-kinesiotaping":{},"/ciekawostki/powrot-do-ruchu-po-urazie":{}},"dynamicRoutes":{"/ciekawostki/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/ciekawostki/[slug]","routeRegex":"^\\/ciekawostki\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"f5358e1250623153b1a43878e23f7f20","previewModeSigningKey":"3044bd339de93808a9c377ff848a90a1bd6bcf61a68b88ace66e9414060642dc","previewModeEncryptionKey":"f56257ef7431bf6fd290626a438bd0843021795ad7c9d202a8ddb5bc36e472f5"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "636ae566fdcab63b41a2fc378d1aafc5",
+    "previewModeSigningKey": "11aa0711cc009a4d1947183f494a6a674d2fdc5f4d1e3c59976441eb8f5254ba",
+    "previewModeEncryptionKey": "e30fa956fed7270364ec35f06f3d3ab52b7efb468b27c0ae2ab52474451c972b"
+  }
+}
