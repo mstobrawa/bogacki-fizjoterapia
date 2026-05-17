@@ -48,6 +48,9 @@ function revalidateCms() {
   revalidatePath("/oferta");
   revalidatePath("/ciekawostki");
   revalidatePath("/admin");
+  revalidatePath("/admin/oferta");
+  revalidatePath("/admin/ciekawostki");
+  revalidatePath("/admin/certyfikaty");
 }
 
 export async function signOut() {
@@ -58,11 +61,15 @@ export async function signOut() {
 
 export async function createService(formData: FormData) {
   const { supabase } = await requireAdmin();
+  const imageFile = formData.get("image") as File | null;
+  const image = imageFile?.size ? await uploadImage("service-images", imageFile, "services") : null;
 
   await supabase.from("services").insert({
     title: value(formData, "title"),
     description: value(formData, "description"),
     price: value(formData, "price"),
+    image_url: image?.url ?? null,
+    storage_path: image?.path ?? null,
     position: Number(value(formData, "position") || 0),
   });
 
@@ -72,6 +79,13 @@ export async function createService(formData: FormData) {
 export async function updateService(formData: FormData) {
   const { supabase } = await requireAdmin();
   const id = value(formData, "id");
+  const imageFile = formData.get("image") as File | null;
+  const image = imageFile?.size ? await uploadImage("service-images", imageFile, "services") : null;
+  const previousStoragePath = value(formData, "current_storage_path");
+
+  if (image && previousStoragePath) {
+    await supabase.storage.from("service-images").remove([previousStoragePath]);
+  }
 
   await supabase
     .from("services")
@@ -79,6 +93,8 @@ export async function updateService(formData: FormData) {
       title: value(formData, "title"),
       description: value(formData, "description"),
       price: value(formData, "price"),
+      image_url: image?.url ?? (value(formData, "current_image_url") || null),
+      storage_path: image?.path ?? (previousStoragePath || null),
       position: Number(value(formData, "position") || 0),
       updated_at: new Date().toISOString(),
     })
@@ -89,6 +105,12 @@ export async function updateService(formData: FormData) {
 
 export async function deleteService(formData: FormData) {
   const { supabase } = await requireAdmin();
+  const storagePath = value(formData, "storage_path");
+
+  if (storagePath) {
+    await supabase.storage.from("service-images").remove([storagePath]);
+  }
+
   await supabase.from("services").delete().eq("id", value(formData, "id"));
   revalidateCms();
 }

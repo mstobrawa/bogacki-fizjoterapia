@@ -11,35 +11,40 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/oferta/page": [
+    "/kontakt/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/oferta/page.js"
+      "static/chunks/app/kontakt/page.js"
     ],
     "/admin/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin/page.js"
     ],
-    "/ciekawostki/page": [
+    "/admin/oferta/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/ciekawostki/page.js"
+      "static/chunks/app/admin/oferta/page.js"
     ],
-    "/ciekawostki/[slug]/page": [
+    "/admin/ciekawostki/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/ciekawostki/[slug]/page.js"
+      "static/chunks/app/admin/ciekawostki/page.js"
     ],
-    "/admin/login/page": [
+    "/admin/certyfikaty/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/admin/login/page.js"
+      "static/chunks/app/admin/certyfikaty/page.js"
     ],
-    "/kontakt/page": [
+    "/oferta/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/kontakt/page.js"
+      "static/chunks/app/oferta/page.js"
+    ],
+    "/prywatnosc/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/prywatnosc/page.js"
     ]
   }
 }

@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { AlternatingSection } from "@/components/sections/AlternatingSection";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { Section } from "@/components/layout/Section";
-import { Button } from "@/components/ui/Button";
+import { AlternatingSection } from "@/components/sections/AlternatingSection";
+import { BookingCtas } from "@/components/sections/BookingCtas";
+import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+
 export const metadata: Metadata = {
   title: "O mnie",
   description:
     "Poznaj podejście do fizjoterapii w gabinecie Bogacki Fizjoterapia w Katowicach.",
 };
+
 export default function AboutPage() {
   return (
     <>
@@ -31,9 +33,7 @@ export default function AboutPage() {
               jasną komunikację i terapię, którą można kontynuować poza
               gabinetem.
             </p>
-            <div className="mt-8">
-              <Button href="/kontakt">Umów wizytę</Button>
-            </div>
+            <BookingCtas className="mt-8" />
           </div>
         </div>
       </Section>

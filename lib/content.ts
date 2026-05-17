@@ -3,6 +3,8 @@ export type Service = {
   title: string;
   description: string;
   price?: string | null;
+  image_url?: string | null;
+  storage_path?: string | null;
   position?: number | null;
 };
 

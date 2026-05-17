@@ -7,6 +7,8 @@ export type Database = {
           title: string;
           description: string;
           price: string;
+          image_url: string | null;
+          storage_path: string | null;
           position: number;
           created_at: string;
           updated_at: string;
@@ -16,6 +18,8 @@ export type Database = {
           title: string;
           description: string;
           price: string;
+          image_url?: string | null;
+          storage_path?: string | null;
           position?: number;
           created_at?: string;
           updated_at?: string;
@@ -24,6 +28,8 @@ export type Database = {
           title?: string;
           description?: string;
           price?: string;
+          image_url?: string | null;
+          storage_path?: string | null;
           position?: number;
           updated_at?: string;
         };

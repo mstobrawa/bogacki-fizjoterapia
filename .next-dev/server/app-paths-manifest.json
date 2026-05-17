@@ -1,9 +1,8 @@
 {
-  "/page": "app/page.js",
-  "/oferta/page": "app/oferta/page.js",
+  "/kontakt/page": "app/kontakt/page.js",
+  "/prywatnosc/page": "app/prywatnosc/page.js",
   "/admin/page": "app/admin/page.js",
-  "/ciekawostki/page": "app/ciekawostki/page.js",
-  "/admin/login/page": "app/admin/login/page.js",
-  "/ciekawostki/[slug]/page": "app/ciekawostki/[slug]/page.js",
-  "/kontakt/page": "app/kontakt/page.js"
+  "/admin/oferta/page": "app/admin/oferta/page.js",
+  "/admin/ciekawostki/page": "app/admin/ciekawostki/page.js",
+  "/admin/certyfikaty/page": "app/admin/certyfikaty/page.js"
 }

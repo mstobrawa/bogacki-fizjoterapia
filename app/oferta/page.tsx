@@ -22,19 +22,20 @@ export default async function OfferPage() {
             Kompleksowa pomoc dla osób z bólem, po urazach i w przeciążeniu
           </h1>
           <p className="mt-6 text-lg leading-8 text-[var(--color-text-muted)]">
-            Struktura oferty jest gotowa pod przyszły CMS, cennik i szczegółowe opisy usług.
+            Struktura oferty jest gotowa pod cennik, zdjęcia usług i szczegółowe opisy terapii.
           </p>
         </div>
       </Section>
       {services.map((service, index) => (
-        <Section key={service.title} tone={index % 2 ? "surface" : "default"}>
+        <Section key={service.id ?? service.title} tone={index % 2 ? "surface" : "default"}>
           <AlternatingSection
             eyebrow={`0${index + 1}`}
             title={service.title}
             description={service.description}
             price={service.price}
+            imageUrl={service.image_url}
             imagePosition={index % 2 ? "left" : "right"}
-            cta={{ label: "Zapytaj o wizytę", href: "/kontakt" }}
+            cta={{ label: "Umów wizytę", href: "/kontakt" }}
           />
         </Section>
       ))}

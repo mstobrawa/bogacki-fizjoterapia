@@ -12,7 +12,7 @@ export async function CertificatesCarousel() {
           Certyfikaty
         </p>
         <h2 className="mt-4 font-[var(--font-display)] text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-          StaĹ‚y rozwĂłj i sprawdzone metody pracy
+          Stały rozwój i sprawdzone metody pracy
         </h2>
       </div>
       <CertificatesLightboxCarousel certificates={certificates} />

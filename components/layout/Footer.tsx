@@ -13,8 +13,8 @@ export function Footer() {
               Bogacki Fizjoterapia
             </p>
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/78">
-              Nowoczesna fizjoterapia w Katowicach oparta o spokojna diagnostyke,
-              jasny plan terapii i prace z realnymi celami pacjenta.
+              Nowoczesna fizjoterapia w Katowicach oparta o spokojną diagnostykę,
+              jasny plan terapii i pracę z realnymi celami pacjenta.
             </p>
             <div className="mt-7 h-px max-w-xs bg-gradient-to-r from-[var(--color-accent)]/70 to-transparent" />
           </div>
@@ -34,7 +34,7 @@ export function Footer() {
                 Kontakt
               </Link>
               <Link className="transition hover:text-white" href="/prywatnosc">
-                Polityka prywatnosci
+                Polityka prywatności
               </Link>
             </div>
           </div>
@@ -47,12 +47,12 @@ export function Footer() {
               <a className="transition hover:text-white" href="mailto:kontakt@bogackifizjo.pl">
                 kontakt@bogackifizjo.pl
               </a>
-              <p>Katowice, woj. slaskie</p>
+              <p>Katowice, woj. śląskie</p>
             </div>
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-6 text-center text-xs leading-6 text-white/55">
-          <p>© {year} bogackifizjoterapia.pl - wszystkie prawa zastrzezone</p>
+          <p>© {year} bogackifizjoterapia.pl - wszystkie prawa zastrzeżone</p>
           <p>
             crafted by{" "}
             <a className="transition hover:text-white" href="https://mikewebworks.dev" target="_blank" rel="noreferrer">

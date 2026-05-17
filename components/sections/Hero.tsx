@@ -1,7 +1,7 @@
-import { Calendar, CheckCircle2, Phone } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
+import { CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+import { BookingCtas } from "@/components/sections/BookingCtas";
+import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 const trustItems = [
   "Indywidualny plan terapii",
@@ -29,16 +29,7 @@ export function Hero() {
           <p className="mt-7 max-w-xl text-lg leading-8 text-[var(--color-text-muted)] sm:text-xl">
             Pomagam wrócić do sprawności po urazach, zmniejszyć ból i poprawić komfort życia.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button href="tel:+48123456789" className="gap-2 px-7">
-              <Phone size={18} />
-              Zadzwoń
-            </Button>
-            <Button href="/kontakt" variant="secondary" className="gap-2 px-7">
-              <Calendar size={18} />
-              Umów wizytę
-            </Button>
-          </div>
+          <BookingCtas className="mt-9" />
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             {trustItems.map((item) => (
               <div

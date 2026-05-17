@@ -1,34 +1,33 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/Section";
-import { Button } from "@/components/ui/Button";
+import { BookingCtas } from "@/components/sections/BookingCtas";
 
 export const metadata: Metadata = {
   title: "Polityka prywatności",
-  description: "Poznaj polityke prywatności.",
+  description: "Poznaj politykę prywatności.",
 };
 
 export default function PrivatePage() {
   return (
     <Section>
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
-            Polityka prywatności
+      <div className="max-w-3xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          Polityka prywatności
+        </p>
+        <h1 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-6xl">
+          Dane przekazywane przez formularz kontaktowy
+        </h1>
+        <div className="mt-6 grid gap-4 text-lg leading-8 text-[var(--color-text-muted)]">
+          <p>
+            Dane z formularza kontaktowego są używane wyłącznie do odpowiedzi na zapytanie i organizacji kontaktu z
+            gabinetem.
           </p>
-          <h1 className="mt-4 text-4xl font-semibold leading-tight text-(--color-primary) sm:text-5xl lg:text-6xl">
-            Umów wizytę lub zapytaj o terapię
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-(--color-text-muted)">
-            Krótko opisz problem, czas trwania dolegliwości i cel wizyty. To
-            pomoże dobrać pierwszy krok terapii.
+          <p>
+            Strona korzysta tylko z niezbędnych cookies potrzebnych do działania serwisu. Nie używamy cookies
+            analitycznych ani marketingowych.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="tel:+48123456789">Zadzwoń</Button>
-            <Button href="mailto:kontakt@bogackifizjo.pl" variant="secondary">
-              Napisz wiadomość
-            </Button>
-          </div>
         </div>
+        <BookingCtas className="mt-8" />
       </div>
     </Section>
   );

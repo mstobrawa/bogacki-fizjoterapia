@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { znanyLekarzUrl } from "@/components/sections/BookingCtas";
 import { Button } from "@/components/ui/Button";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
@@ -12,6 +13,7 @@ type AlternatingSectionProps = {
   };
   eyebrow?: string;
   price?: string | null;
+  imageUrl?: string | null;
 };
 
 export function AlternatingSection({
@@ -21,6 +23,7 @@ export function AlternatingSection({
   cta,
   eyebrow,
   price,
+  imageUrl,
 }: AlternatingSectionProps) {
   const reverse = imagePosition === "left";
 
@@ -45,16 +48,28 @@ export function AlternatingSection({
           </p>
         ) : null}
         {cta ? (
-          <div className="mt-8">
-            <Button href={cta.href} variant="secondary" className="gap-2">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button href={cta.href} className="gap-2">
               {cta.label}
               <ArrowRight size={17} />
+            </Button>
+            <Button href={znanyLekarzUrl} target="_blank" rel="noreferrer" variant="secondary" className="gap-2">
+              ZnanyLekarz
+              <ExternalLink size={16} />
             </Button>
           </div>
         ) : null}
       </div>
       <div className={reverse ? "lg:order-1" : ""}>
-        <PlaceholderImage label={title} />
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={title}
+            className="aspect-[4/3] w-full rounded-[2rem] border border-white/70 object-cover shadow-[var(--shadow-card)]"
+          />
+        ) : (
+          <PlaceholderImage label={title} />
+        )}
       </div>
     </div>
   );
