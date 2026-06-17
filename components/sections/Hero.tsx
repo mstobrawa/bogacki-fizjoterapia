@@ -27,7 +27,8 @@ export function Hero() {
             </span>
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-8 text-[var(--color-text-muted)] sm:text-xl">
-            Pomagam wrócić do sprawności po urazach, zmniejszyć ból i poprawić komfort życia.
+            Pomagam wrócić do sprawności po urazach, zmniejszyć ból i poprawić
+            komfort życia.
           </p>
           <BookingCtas className="mt-9" />
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -36,7 +37,10 @@ export function Hero() {
                 key={item}
                 className="flex items-center gap-3 rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-primary)] shadow-sm"
               >
-                <CheckCircle2 size={17} className="shrink-0 text-[var(--color-accent)]" />
+                <CheckCircle2
+                  size={17}
+                  className="shrink-0 text-[var(--color-accent)]"
+                />
                 <span>{item}</span>
               </div>
             ))}
@@ -44,7 +48,11 @@ export function Hero() {
         </div>
         <div className="relative">
           <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-[var(--color-primary)]/12 blur-2xl" />
-          <PlaceholderImage label="Nowoczesny gabinet fizjoterapii" className="lg:aspect-[5/5]" />
+          <PlaceholderImage
+            src="/gabinet.webp"
+            label="Nowoczesny gabinet fizjoterapii"
+            className="lg:aspect-[5/5]"
+          />
         </div>
       </Container>
     </section>

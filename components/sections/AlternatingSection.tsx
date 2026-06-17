@@ -12,6 +12,7 @@ type AlternatingSectionProps = {
   eyebrow?: string;
   price?: string | null;
   imageUrl?: string | null;
+  imageAlt?: string | null;
 };
 
 export function AlternatingSection({
@@ -22,6 +23,7 @@ export function AlternatingSection({
   eyebrow,
   price,
   imageUrl,
+  imageAlt,
 }: AlternatingSectionProps) {
   const reverse = imagePosition === "left";
 
@@ -45,17 +47,11 @@ export function AlternatingSection({
             {price}
           </p>
         ) : null}
-        {cta ? (
-          <BookingCtas className="mt-8" bookingLabel={cta.label} />
-        ) : null}
+        {cta ? <BookingCtas className="mt-8" bookingLabel={cta.label} /> : null}
       </div>
       <div className={reverse ? "lg:order-1" : ""}>
         {imageUrl ? (
-          <img
-            src={imageUrl}
-            alt={title}
-            className="aspect-[4/3] w-full rounded-[2rem] border border-white/70 object-cover shadow-[var(--shadow-card)]"
-          />
+          <PlaceholderImage label={imageAlt ?? title} src={imageUrl} />
         ) : (
           <PlaceholderImage label={title} />
         )}

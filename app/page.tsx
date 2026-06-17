@@ -17,6 +17,8 @@ export default function HomePage() {
           description="Każda wizyta zaczyna się od rozmowy i oceny ruchu. Dzięki temu terapia nie jest przypadkowym zestawem technik, ale uporządkowanym procesem dopasowanym do bólu, trybu życia i celu pacjenta."
           imagePosition="right"
           cta={{ label: "Poznaj mnie", href: "/o-mnie" }}
+          imageUrl="/konsultacja.webp"
+          imageAlt={"Konsultacja fizjoterapeutyczna w gabinecie"}
         />
       </Section>
       <ServicesPreview />
@@ -28,6 +30,8 @@ export default function HomePage() {
           description="Pracuję z osobami aktywnymi, pacjentami po kontuzjach oraz osobami przeciążonymi pracą siedzącą. Celem jest trwała poprawa funkcji, a nie tylko chwilowe wyciszenie objawów."
           imagePosition="left"
           cta={{ label: "Zobacz ofertę", href: "/oferta" }}
+          imageUrl="/bolplecow.webp"
+          imageAlt="Masaż pomagający na ból pleców"
         />
       </Section>
       <CertificatesCarousel />
