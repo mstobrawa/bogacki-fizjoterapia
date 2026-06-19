@@ -13,8 +13,9 @@ export function Footer() {
               Bogacki Fizjoterapia
             </p>
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/78">
-              Nowoczesna fizjoterapia w Katowicach oparta o spokojną diagnostykę,
-              jasny plan terapii i pracę z realnymi celami pacjenta.
+              Nowoczesna fizjoterapia w Katowicach oparta o dokładną
+              diagnostykę, jasny plan terapii i pracę z realnymi celami
+              pacjenta.
             </p>
             <div className="mt-7 h-px max-w-xs bg-gradient-to-r from-[var(--color-accent)]/70 to-transparent" />
           </div>
@@ -41,11 +42,17 @@ export function Footer() {
           <div>
             <p className="text-sm font-semibold">Kontakt</p>
             <div className="mt-4 grid gap-3 text-sm text-white/78">
-              <a className="transition hover:text-white" href="tel:+48123456789">
-                +48 123 456 789
+              <a
+                className="transition hover:text-white"
+                href="tel:+48505476614"
+              >
+                +48 505 476 614
               </a>
-              <a className="transition hover:text-white" href="mailto:kontakt@bogackifizjo.pl">
-                kontakt@bogackifizjo.pl
+              <a
+                className="transition hover:text-white"
+                href="mailto:bogackipiotr13@gmail.com"
+              >
+                bogackipiotr13@gmail.com
               </a>
               <p>Katowice, woj. śląskie</p>
             </div>
@@ -55,7 +62,12 @@ export function Footer() {
           <p>© {year} bogackifizjoterapia.pl - wszystkie prawa zastrzeżone</p>
           <p>
             crafted by{" "}
-            <a className="transition hover:text-white" href="https://mikewebworks.dev" target="_blank" rel="noreferrer">
+            <a
+              className="transition hover:text-white"
+              href="https://mikewebworks.dev"
+              target="_blank"
+              rel="noreferrer"
+            >
               Mike Webworks
             </a>
           </p>

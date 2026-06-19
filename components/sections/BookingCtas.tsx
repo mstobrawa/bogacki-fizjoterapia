@@ -1,7 +1,7 @@
 import { Calendar, ExternalLink, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
-export const phoneHref = "tel:+48123456789";
+export const phoneHref = "tel:+48505476614";
 export const znanyLekarzUrl =
   "https://www.znanylekarz.pl/piotr-bogacki-4/fizjoterapeuta/katowice";
 
@@ -10,9 +10,14 @@ type BookingCtasProps = {
   bookingLabel?: string;
 };
 
-export function BookingCtas({ className = "", bookingLabel = "Umów wizytę" }: BookingCtasProps) {
+export function BookingCtas({
+  className = "",
+  bookingLabel = "Umów wizytę",
+}: BookingCtasProps) {
   return (
-    <div className={`flex flex-col gap-3 sm:flex-row sm:flex-wrap ${className}`}>
+    <div
+      className={`flex flex-col gap-3 sm:flex-row sm:flex-wrap ${className}`}
+    >
       <Button href={phoneHref} className="gap-2 px-7">
         <Phone size={18} />
         Zadzwoń

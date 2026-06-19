@@ -25,7 +25,8 @@ export default function ContactPage() {
             Umów wizytę lub zapytaj o terapię
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-text-muted)]">
-            Krótko opisz problem, czas trwania dolegliwości i cel wizyty. To pomoże dobrać pierwszy krok terapii.
+            Krótko opisz problem, czas trwania dolegliwości i cel wizyty. To
+            pomoże dobrać pierwszy krok terapii.
           </p>
         </div>
 
@@ -35,18 +36,19 @@ export default function ContactPage() {
             <div className="grid gap-3 rounded-[1.35rem] border border-[var(--color-border)] bg-white/90 p-4 text-sm shadow-sm">
               <a
                 className="flex items-center gap-3 text-[var(--color-primary)] transition hover:text-[var(--color-accent)]"
-                href="tel:+48123456789"
+                href="tel:+48505476614"
               >
-                <Phone size={18} /> +48 123 456 789
+                <Phone size={18} /> +48 505 476 614
               </a>
               <a
                 className="flex items-center gap-3 text-[var(--color-primary)] transition hover:text-[var(--color-accent)]"
-                href="mailto:kontakt@bogackifizjo.pl"
+                href="mailto:bogackipiotr13@gmail.com"
               >
-                <Mail size={18} /> kontakt@bogackifizjo.pl
+                <Mail size={18} /> bogackipiotr13@gmail.com
               </a>
               <p className="flex items-center gap-3 text-[var(--color-primary)]">
-                <MapPin size={18} /> Generała Zygmunta Waltera-Jankego 275, Katowice
+                <MapPin size={18} /> Generała Zygmunta Waltera-Jankego 275,
+                Katowice
               </p>
             </div>
             <BookingCtas />

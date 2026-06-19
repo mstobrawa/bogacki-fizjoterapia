@@ -10,7 +10,7 @@ export default function HomePage() {
     <>
       <Hero />
       <div className="premium-divider" />
-      <Section className="lg:py-[6.5rem]">
+      {/* <Section className="lg:py-[6.5rem]">
         <AlternatingSection
           eyebrow="Podejście"
           title="Najpierw diagnoza, potem precyzyjna terapia"
@@ -20,10 +20,10 @@ export default function HomePage() {
           imageUrl="/konsultacja.webp"
           imageAlt={"Konsultacja fizjoterapeutyczna w gabinecie"}
         />
-      </Section>
+      </Section> */}
       <ServicesPreview />
       <div className="premium-divider" />
-      <Section className="lg:py-[6.5rem]">
+      {/* <Section className="lg:py-[6.5rem]">
         <AlternatingSection
           eyebrow="Dla pacjentów"
           title="Pomoc w bólu pleców, po urazie i przy napięciu"
@@ -33,7 +33,7 @@ export default function HomePage() {
           imageUrl="/bolplecow.webp"
           imageAlt="Masaż pomagający na ból pleców"
         />
-      </Section>
+      </Section> */}
       <CertificatesCarousel />
       <Testimonials />
     </>

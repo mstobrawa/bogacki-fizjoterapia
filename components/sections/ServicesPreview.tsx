@@ -7,7 +7,7 @@ export async function ServicesPreview() {
   const services = await getServices();
 
   return (
-    <Section tone="surface">
+    <Section tone="default">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
@@ -38,8 +38,13 @@ export async function ServicesPreview() {
               {String(index + 1).padStart(2, "0")}
             </div>
             <div className="flex items-start justify-between gap-4">
-              <h3 className="text-xl font-semibold text-[var(--color-primary)]">{service.title}</h3>
-              <ArrowRight className="mt-1 shrink-0 text-[var(--color-accent)] transition group-hover:translate-x-1" size={20} />
+              <h3 className="text-xl font-semibold text-[var(--color-primary)]">
+                {service.title}
+              </h3>
+              <ArrowRight
+                className="mt-1 shrink-0 text-[var(--color-accent)] transition group-hover:translate-x-1"
+                size={20}
+              />
             </div>
             {service.price ? (
               <p className="mt-3 inline-flex rounded-full bg-[var(--color-surface)] px-4 py-2 text-sm font-semibold text-[var(--color-primary)]">

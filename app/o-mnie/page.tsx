@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Section>
+      <Section tone="surface">
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <PlaceholderImage
             src="/ja.webp"
@@ -28,22 +28,32 @@ export default function AboutPage() {
               Fizjoterapia oparta o uważność, edukację i realny plan
             </h1>
             <p className="mt-6 text-lg leading-8 text-[var(--color-text-muted)]">
-              Pomagam pacjentom odzyskiwać sprawność po urazach, zmniejszać ból
-              i lepiej rozumieć swoje ciało. Stawiam na spokojną diagnostykę,
-              jasną komunikację i terapię, którą można kontynuować poza
-              gabinetem.
+              Nazywam się Piotr Bogacki i jestem absolwentem Śląskiego
+              Uniwersytetu Medycznego na kierunku fizjoterapia. W obszarze moich
+              zainteresowań zawodowych znajduje się przede wszystkim terapia
+              przeciwbólowa urazów przewlekłych oraz biomechanika układu ruchu.
+              Wierzę, że prawidłowo postawiona diagnoza jest kluczem zarówno do
+              leczenia bólu, jak i poprawy innych aspektów zdrowotnych — od
+              ograniczeń ruchomości po względy estetyczne. W swojej praktyce
+              stawiam na indywidualne podejście i atmosferę sprzyjającą terapii,
+              pamiętając jednocześnie, że najważniejszy pozostaje efekt końcowy
+              rehabilitacji. Poniżej przedstawiam wykaz dyplomów i certyfikatów
+              potwierdzających moje kwalifikacje oraz rozwój zawodowy. Ich
+              liczba będzie się stopniowo zwiększać wraz z dalszym poszerzaniem
+              wiedzy i doświadczenia. Jeśli uznają mnie Państwo za osobę godną
+              zaufania — zapraszam do kontaktu.
             </p>
             <BookingCtas className="mt-8" />
           </div>
         </div>
       </Section>
-      <Section tone="surface">
+      {/* <Section tone="surface">
         <AlternatingSection
           title="Doświadczenie, które przekłada się na prostą komunikację"
           description="Pacjent powinien wiedzieć, co robimy, dlaczego to robimy i jak mierzymy postęp. Dlatego każda terapia kończy się konkretnymi zaleceniami oraz planem kolejnych kroków."
           imagePosition="right"
         />
-      </Section>
+      </Section> */}
     </>
   );
 }

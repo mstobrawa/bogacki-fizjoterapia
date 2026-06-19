@@ -6,7 +6,7 @@ import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 const trustItems = [
   "Indywidualny plan terapii",
   "Praca z bólem pleców",
-  "Spokojna diagnostyka",
+  "Dokładna diagnostyka",
 ];
 
 export function Hero() {
@@ -17,12 +17,12 @@ export function Hero() {
         <div className="max-w-2xl">
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--color-primary)] bg-white px-4 py-2 text-sm font-semibold text-[var(--color-primary)] shadow-sm">
             <span className="size-2 rounded-full bg-[var(--color-accent)]" />
-            Fizjoterapia w Katowicach
+            Fizjoterapia w Katowicach i Mysłowicach
           </p>
           <h1 className="font-[var(--font-display)] text-[2.75rem] font-semibold leading-[1.03] text-[var(--color-primary)] sm:text-6xl lg:text-7xl">
-            Bogacki Fizjoterapia - skuteczna pomoc w{" "}
+            Bogacki Fizjoterapia - skuteczna{" "}
             <span className="relative whitespace-nowrap text-[var(--color-primary)]">
-              bólu pleców
+              pomoc w bólu
               <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-[var(--color-accent)]/60" />
             </span>
           </h1>
