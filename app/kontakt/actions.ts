@@ -104,7 +104,7 @@ export async function sendContactMessage(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Bogacki Fizjoterapia <onboarding@resend.dev>",
+        from: "Bogacki Fizjoterapia <kontakt@bogackifizjoterapia.pl>",
         to: [contactEmail],
         reply_to: email,
         subject: `Nowe zapytanie ze strony: ${name}`,
