@@ -64,7 +64,7 @@ export default function ContactPage() {
                 className="h-[18rem] w-full border-0 sm:h-[22rem] lg:h-[24rem]"
               />
             </div>
-            <ClinicEntranceImage />
+            {/* <ClinicEntranceImage /> */}
           </div>
         </div>
       </div>

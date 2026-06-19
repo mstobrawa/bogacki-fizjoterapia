@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useActionState } from "react";
+import { startTransition, useActionState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/Button";
 import { sendContactMessage } from "./actions";
 
@@ -17,10 +17,25 @@ const labelClass = "grid gap-2 text-sm font-semibold text-[var(--color-primary)]
 
 export function ContactForm() {
   const [state, action, pending] = useActionState(sendContactMessage, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.ok) {
+      formRef.current?.reset();
+    }
+  }, [state]);
 
   return (
     <form
-      action={action}
+      ref={formRef}
+      onSubmit={(event) => {
+        event.preventDefault();
+        const formData = new FormData(event.currentTarget);
+
+        startTransition(() => {
+          action(formData);
+        });
+      }}
       className="grid w-full max-w-[38rem] gap-3.5 rounded-[1.5rem] border border-[var(--color-border)] bg-white/95 p-4 shadow-sm ring-1 ring-[var(--color-primary)]/5 sm:p-5"
     >
       <div className="hidden">
