@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { BookingCtas } from "@/components/sections/BookingCtas";
-import { ClinicEntranceImage } from "./ClinicEntranceImage";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
@@ -64,7 +63,6 @@ export default function ContactPage() {
                 className="h-[18rem] w-full border-0 sm:h-[22rem] lg:h-[24rem]"
               />
             </div>
-            {/* <ClinicEntranceImage /> */}
           </div>
         </div>
       </div>

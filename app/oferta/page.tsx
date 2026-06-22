@@ -22,9 +22,6 @@ export default async function OfferPage() {
           <h1 className="mt-4 font-[var(--font-display)] text-4xl font-semibold leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-6xl">
             Kompleksowa pomoc dla osób z bólem, po urazach i w przeciążeniu
           </h1>
-          {/* <p className="mt-6 text-lg leading-8 text-[var(--color-text-muted)]">
-            Struktura oferty jest gotowa pod cennik, zdjęcia usług i szczegółowe opisy terapii.
-          </p> */}
         </div>
       </Section>
       {services.map((service, index) => (

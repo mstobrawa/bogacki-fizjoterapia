@@ -36,7 +36,6 @@ export async function sendContactMessage(
 
   const website = trimmedField(formData, "website");
 
-  // honeypot
   if (website) {
     return {
       ok: true,
@@ -44,7 +43,6 @@ export async function sendContactMessage(
     };
   }
 
-  // wymagane
   if (!name || !email || !message || !acceptedPrivacy) {
     return {
       ok: false,
@@ -52,7 +50,6 @@ export async function sendContactMessage(
     };
   }
 
-  // imię
   if (name.length < 2 || name.length > 60) {
     return {
       ok: false,
@@ -60,7 +57,6 @@ export async function sendContactMessage(
     };
   }
 
-  // email
   if (!isEmail(email)) {
     return {
       ok: false,
@@ -68,7 +64,6 @@ export async function sendContactMessage(
     };
   }
 
-  // telefon opcjonalny
   if (phone && (!isPhone(phone) || phone.length < 7 || phone.length > 20)) {
     return {
       ok: false,
@@ -76,7 +71,6 @@ export async function sendContactMessage(
     };
   }
 
-  // wiadomość
   if (message.length < 10 || message.length > 2000) {
     return {
       ok: false,

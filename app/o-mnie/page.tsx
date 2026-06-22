@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/Section";
-import { AlternatingSection } from "@/components/sections/AlternatingSection";
 import { BookingCtas } from "@/components/sections/BookingCtas";
 import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
@@ -47,13 +46,6 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      {/* <Section tone="surface">
-        <AlternatingSection
-          title="Doświadczenie, które przekłada się na prostą komunikację"
-          description="Pacjent powinien wiedzieć, co robimy, dlaczego to robimy i jak mierzymy postęp. Dlatego każda terapia kończy się konkretnymi zaleceniami oraz planem kolejnych kroków."
-          imagePosition="right"
-        />
-      </Section> */}
     </>
   );
 }

@@ -29,23 +29,32 @@ const variants: Record<Variant, string> = {
 };
 
 export function Button(props: ButtonAsLink | ButtonAsButton) {
-  const { children, variant = "primary", className = "" } = props;
+  const {
+    children,
+    variant = "primary",
+    className = "",
+    ...elementProps
+  } = props;
   const styles = `inline-flex min-h-12 items-center justify-center rounded-full px-6 text-sm font-semibold transition duration-300 ease-[var(--ease-premium)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)] ${variants[variant]} ${className}`;
 
   if ("href" in props && typeof props.href === "string") {
-    const { children: _children, variant: _variant, className: _className, ...linkProps } = props as ButtonAsLink;
-
     return (
-      <Link className={styles} {...linkProps}>
+      <Link
+        className={styles}
+        {...(elementProps as AnchorHTMLAttributes<HTMLAnchorElement> & {
+          href: string;
+        })}
+      >
         {children}
       </Link>
     );
   }
 
-  const { children: _children, variant: _variant, className: _className, ...buttonProps } = props as ButtonAsButton;
-
   return (
-    <button className={styles} {...buttonProps}>
+    <button
+      className={styles}
+      {...(elementProps as ButtonHTMLAttributes<HTMLButtonElement>)}
+    >
       {children}
     </button>
   );

@@ -63,15 +63,6 @@ export function Testimonials() {
             Spokojna, konkretna pomoc w powrocie do sprawności
           </h2>
         </div>
-        {/* <div className="rounded-[1.75rem] border border-[var(--color-border)] bg-white p-5 shadow-sm ring-1 ring-[var(--color-primary)]/5">
-          <p className="text-sm font-semibold text-[var(--color-primary)]">
-            Placeholder opinii inspirowany serwisami medycznymi
-          </p>
-          <p className="mt-2 text-sm leading-6 text-[var(--color-text-muted)]">
-            Docelowo sekcja może być zasilana ręcznie z CMS lub połączona z
-            zewnętrznym źródłem opinii.
-          </p>
-        </div> */}
       </div>
       <div className="mt-11 overflow-hidden py-2" ref={emblaRef}>
         <div className="-ml-5 flex">
@@ -95,21 +86,12 @@ export function Testimonials() {
                   ))}
                 </div>
                 <p className="mt-6 text-base leading-8 text-[var(--color-text)]">
-                  "{testimonial.text}"
+                  “{testimonial.text}”
                 </p>
                 <div className="mt-7 border-t border-[var(--color-border)] pt-5">
                   <span className="inline-flex items-center rounded-full bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-[var(--color-surface)] shadow-sm">
                     {testimonial.initials}
                   </span>
-
-                  {/* <div>
-                    <p className="text-sm font-semibold text-[var(--color-primary)]">
-                      Pacjent
-                    </p>
-                    <p className="text-xs text-[var(--color-text-muted)]">
-                      Opinia placeholder
-                    </p>
-                  </div> */}
                 </div>
               </article>
             </div>

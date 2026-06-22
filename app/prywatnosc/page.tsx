@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/Section";
-import { BookingCtas } from "@/components/sections/BookingCtas";
 
 export const metadata: Metadata = {
   title: "Polityka prywatności",
