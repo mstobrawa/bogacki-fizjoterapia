@@ -76,13 +76,20 @@ export function Testimonials() {
                   className="absolute right-7 top-7 text-[var(--color-surface)]"
                   size={38}
                   fill="currentColor"
+                  aria-hidden="true"
                 />
                 <div
                   className="flex gap-1 text-[var(--color-primary)]"
+                  role="img"
                   aria-label="Ocena 5 na 5"
                 >
                   {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} size={17} fill="currentColor" />
+                    <Star
+                      key={index}
+                      size={17}
+                      fill="currentColor"
+                      aria-hidden="true"
+                    />
                   ))}
                 </div>
                 <p className="mt-6 text-base leading-8 text-[var(--color-text)]">

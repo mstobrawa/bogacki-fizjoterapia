@@ -52,6 +52,8 @@ export function Hero() {
             src="/gabinet.webp"
             label="Nowoczesny gabinet fizjoterapii"
             className="lg:aspect-[5/5]"
+            priority
+            sizes="(min-width: 1280px) 560px, (min-width: 1024px) 48vw, calc(100vw - 88px)"
           />
         </div>
       </Container>

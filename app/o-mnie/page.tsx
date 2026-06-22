@@ -18,6 +18,7 @@ export default function AboutPage() {
             src="/ja.webp"
             label="Piotr Bogacki"
             variant="portrait"
+            sizes="(min-width: 1280px) 500px, (min-width: 1024px) 44vw, calc(100vw - 88px)"
           />
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">

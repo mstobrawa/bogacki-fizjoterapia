@@ -5,6 +5,8 @@ type PlaceholderImageProps = {
   className?: string;
   variant?: "portrait" | "wide" | "certificate";
   src?: string;
+  priority?: boolean;
+  sizes?: string;
 };
 
 export function PlaceholderImage({
@@ -12,6 +14,8 @@ export function PlaceholderImage({
   className = "",
   variant = "wide",
   src,
+  priority = false,
+  sizes = "(min-width: 1024px) 48vw, 100vw",
 }: PlaceholderImageProps) {
   const ratio =
     variant === "portrait"
@@ -32,6 +36,8 @@ export function PlaceholderImage({
             src={src}
             alt={label}
             fill
+            priority={priority}
+            sizes={sizes}
             className="object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
           />
 

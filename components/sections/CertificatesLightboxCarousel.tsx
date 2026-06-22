@@ -7,21 +7,30 @@ import type { Certificate } from "@/lib/content";
 function CertificateCard({
   certificate,
   onOpen,
+  focusable = true,
 }: {
   certificate: Certificate;
   onOpen: (certificate: Certificate) => void;
+  focusable?: boolean;
 }) {
   const title = certificate.title || "Certyfikat";
 
   return (
     <button
       type="button"
+      tabIndex={focusable ? 0 : -1}
       onClick={() => onOpen(certificate)}
       className="group block h-full w-full rounded-[1.75rem] border border-white/15 bg-white p-5 text-left text-[var(--color-text)] shadow-[var(--shadow-card)] ring-1 ring-white/10 transition duration-300 ease-[var(--ease-premium)] hover:-translate-y-1 hover:shadow-[var(--shadow-premium)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-accent)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-[linear-gradient(135deg,#F4EFEA_0%,#FFFFFF_48%,#dbe6e8_100%)]">
         {certificate.image_url ? (
-          <img src={certificate.image_url} alt="" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+          <img
+            src={certificate.image_url}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+          />
         ) : (
           <>
             <div className="absolute inset-5 rounded-2xl border border-white/80 bg-white/28" />
@@ -76,7 +85,11 @@ export function CertificatesLightboxCarousel({ certificates }: { certificates: C
               className="w-[78vw] shrink-0 sm:w-[22rem] lg:w-[24rem]"
               aria-hidden={index >= certificates.length}
             >
-              <CertificateCard certificate={certificate} onOpen={setActive} />
+              <CertificateCard
+                certificate={certificate}
+                onOpen={setActive}
+                focusable={index < certificates.length}
+              />
             </div>
           ))}
         </div>
