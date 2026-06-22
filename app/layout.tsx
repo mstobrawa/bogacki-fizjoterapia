@@ -7,7 +7,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Bogacki Fizjoterapia | Skuteczna pomoc w bólu pleców",
+    default: "Bogacki Fizjoterapia | Skuteczna pomoc w bólu",
     template: "%s | Bogacki Fizjoterapia",
   },
   description:
