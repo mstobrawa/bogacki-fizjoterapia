@@ -23,29 +23,36 @@ export function Navbar() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--color-border)] bg-white/95 backdrop-blur-2xl">
+    <header className="sticky top-0 z-40 border-b border-(--color-border) bg-white/95 backdrop-blur-2xl">
       <Container className="flex h-24 items-center justify-between">
-        <Link href="/" className="group flex items-center text-[var(--color-primary)]" aria-label="Bogacki Fizjoterapia - strona główna">
+        <Link
+          href="/"
+          className="group flex items-center text-(--color-primary)"
+          aria-label="Bogacki Fizjoterapia - strona główna"
+        >
           <Image
             src="/logo-hori.png"
             alt="Bogacki Fizjoterapia"
             width={260}
             height={78}
             priority
-            className="h-16 w-auto object-contain sm:h-[4.5rem]"
+            className="h-16 w-auto object-contain sm:h-18"
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 rounded-full border border-[var(--color-border)] bg-white p-1 shadow-sm lg:flex" aria-label="Główna nawigacja">
+        <nav
+          className="hidden items-center gap-1 rounded-full border border-(--color-border) bg-white p-1 shadow-sm lg:flex"
+          aria-label="Główna nawigacja"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
-              className={`rounded-full px-4 py-2.5 text-sm font-medium transition duration-300 ease-[var(--ease-premium)] ${
+              className={`rounded-full px-4 py-2.5 text-sm font-medium transition duration-300 ease-(--ease-premium) ${
                 isActive(item.href)
-                  ? "bg-[var(--color-primary)] !text-[var(--color-on-primary)] shadow-sm"
-                  : "text-[var(--color-primary)] hover:bg-[var(--color-surface)] hover:text-[var(--color-primary-hover)]"
+                  ? "bg-(--color-primary) text-(--color-on-primary)! shadow-sm"
+                  : "text-(--color-primary) hover:bg-(--color-surface) hover:text-(--color-primary-hover)"
               }`}
             >
               {item.label}
@@ -55,7 +62,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-[var(--color-primary)] bg-white text-[var(--color-primary)] shadow-sm transition hover:border-[var(--color-accent)] lg:hidden"
+          className="inline-flex size-11 items-center justify-center rounded-full border border-(--color-primary) bg-white text-(--color-primary) shadow-sm transition hover:border-(--color-accent) lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-controls="mobile-menu"
@@ -67,7 +74,7 @@ export function Navbar() {
 
       <div
         id="mobile-menu"
-        className={`grid overflow-hidden border-t border-[var(--color-border)] bg-white shadow-[0_22px_70px_rgba(13,27,42,0.16)] backdrop-blur-2xl transition-all duration-500 ease-[var(--ease-premium)] lg:hidden ${
+        className={`grid overflow-hidden border-t border-(--color-border) bg-white shadow-[0_22px_70px_rgba(13,27,42,0.16)] backdrop-blur-2xl transition-all duration-500 ease-(--ease-premium) lg:hidden ${
           open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
@@ -80,8 +87,8 @@ export function Navbar() {
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={`rounded-2xl px-4 py-4 text-base font-semibold transition ${
                   isActive(item.href)
-                    ? "bg-[var(--color-primary)] !text-[var(--color-on-primary)]"
-                    : "text-[var(--color-primary)] hover:bg-[var(--color-surface)]"
+                    ? "bg-(--color-primary) text-(--color-on-primary)!"
+                    : "text-(--color-primary) hover:bg-(--color-surface)"
                 }`}
                 onClick={() => setOpen(false)}
               >

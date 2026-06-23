@@ -10,7 +10,13 @@ type AdminImageFieldProps = {
   previewClassName?: string;
 };
 
-export function AdminImageField({ name, label, currentUrl, required, previewClassName }: AdminImageFieldProps) {
+export function AdminImageField({
+  name,
+  label,
+  currentUrl,
+  required,
+  previewClassName,
+}: AdminImageFieldProps) {
   const [preview, setPreview] = useState(currentUrl ?? "");
 
   useEffect(() => {
@@ -19,14 +25,16 @@ export function AdminImageField({ name, label, currentUrl, required, previewClas
 
   return (
     <div className="grid gap-3">
-      <label className="text-sm font-semibold text-[var(--color-primary)]">{label}</label>
+      <label className="text-sm font-semibold text-(--color-primary)">
+        {label}
+      </label>
       {preview ? (
         <img
           src={preview}
           alt=""
           className={
             previewClassName ??
-            "aspect-[4/3] w-full rounded-[1.25rem] border border-[var(--color-border)] object-cover"
+            "aspect-4/3 w-full rounded-[1.25rem] border border-(--color-border) object-cover"
           }
         />
       ) : null}
@@ -41,7 +49,7 @@ export function AdminImageField({ name, label, currentUrl, required, previewClas
             setPreview(URL.createObjectURL(file));
           }
         }}
-        className="min-h-11 rounded-2xl border border-[var(--color-border)] bg-white px-4 py-2 text-sm outline-none transition file:mr-4 file:rounded-full file:border-0 file:bg-[var(--color-surface)] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-[var(--color-primary)] focus:border-[var(--color-primary)]"
+        className="min-h-11 rounded-2xl border border-(--color-border) bg-white px-4 py-2 text-sm outline-none transition file:mr-4 file:rounded-full file:border-0 file:bg-(--color-surface) file:px-4 file:py-2 file:text-sm file:font-semibold file:text-(--color-primary) focus:border-(--color-primary)"
       />
     </div>
   );

@@ -15,12 +15,10 @@ function PolicyBlock({
   children: React.ReactNode;
 }) {
   return (
-    <section className="border-t border-[var(--color-border)] py-8 first:border-none first:pt-0">
-      <h2 className="text-xl font-semibold text-[var(--color-primary)]">
-        {title}
-      </h2>
+    <section className="border-t border-(--color-border) py-8 first:border-none first:pt-0">
+      <h2 className="text-xl font-semibold text-(--color-primary)">{title}</h2>
 
-      <div className="mt-4 space-y-4 leading-8 text-[var(--color-text-muted)]">
+      <div className="mt-4 space-y-4 leading-8 text-(--color-text-muted)">
         {children}
       </div>
     </section>
@@ -31,26 +29,26 @@ export default function PrivacyPage() {
   return (
     <Section tone="surface">
       <div className="mx-auto max-w-4xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
           Polityka prywatności
         </p>
 
-        <h1 className="mt-4 font-[var(--font-display)] text-4xl font-semibold leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-6xl">
+        <h1 className="mt-4 text-4xl font-semibold leading-tight text-(--color-primary) sm:text-5xl lg:text-6xl">
           Informacje o przetwarzaniu danych osobowych
         </h1>
 
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-[var(--color-text-muted)]">
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-(--color-text-muted)">
           Dbamy o prywatność osób korzystających ze strony internetowej Bogacki
           Fizjoterapia. Poniżej znajdziesz informacje dotyczące przetwarzania
           danych osobowych oraz wykorzystywania plików cookie.
         </p>
 
-        <div className="mt-14 rounded-[2rem] border border-[var(--color-border)] bg-white p-8 shadow-[var(--shadow-card)]">
+        <div className="mt-14 rounded-4xl border border-(--color-border) bg-white p-8 shadow-(--shadow-card)">
           <PolicyBlock title="1. Administrator danych">
             <p>Administratorem danych osobowych jest:</p>
 
-            <div className="rounded-3xl bg-[var(--color-surface)] p-6">
-              <p className="font-semibold text-[var(--color-primary)]">
+            <div className="rounded-3xl bg-(--color-surface) p-6">
+              <p className="font-semibold text-(--color-primary)">
                 Piotr Bogacki Fizjoterapia
               </p>
 

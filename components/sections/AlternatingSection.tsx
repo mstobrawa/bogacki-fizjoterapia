@@ -28,22 +28,22 @@ export function AlternatingSection({
   const reverse = imagePosition === "left";
 
   return (
-    <div className="grid items-center gap-9 lg:grid-cols-[1fr_1.04fr] lg:gap-[4.5rem]">
+    <div className="grid items-center gap-9 lg:grid-cols-[1fr_1.04fr] lg:gap-18">
       <div className={`max-w-xl ${reverse ? "lg:order-2 lg:ml-auto" : ""}`}>
         {eyebrow ? (
-          <p className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
-            <span className="h-px w-10 bg-[var(--color-accent)]/50" />
+          <p className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-(--color-primary)">
+            <span className="h-px w-10 bg-(--color-accent)/50" />
             {eyebrow}
           </p>
         ) : null}
-        <h2 className="font-[var(--font-display)] text-3xl font-semibold leading-[1.08] text-[var(--color-primary)] sm:text-4xl lg:text-5xl">
+        <h2 className="font-(--font-display) text-3xl leading-[1.08] text-(--color-primary) sm:text-4xl lg:text-5xl">
           {title}
         </h2>
-        <p className="mt-6 text-base leading-8 text-[var(--color-text-muted)] sm:text-lg">
+        <p className="mt-6 text-base leading-8 text-(--color-text-muted) sm:text-lg">
           {description}
         </p>
         {price ? (
-          <p className="mt-6 inline-flex rounded-full border border-[var(--color-border)] bg-white px-5 py-2 text-sm font-semibold text-[var(--color-primary)] shadow-sm">
+          <p className="mt-6 inline-flex rounded-full border border-(--color-border) bg-white px-5 py-2 text-sm font-semibold text-(--color-primary) shadow-sm">
             {price}
           </p>
         ) : null}

@@ -31,7 +31,7 @@ export function BookingCtas({
         target="_blank"
         rel="noreferrer"
         variant="ghost"
-        className="gap-2 border border-[var(--color-primary)]/18 bg-[var(--color-surface)]/70 px-6 font-semibold shadow-sm hover:-translate-y-0.5 hover:border-[var(--color-accent)]/45 hover:bg-[var(--color-primary)]/6 hover:text-[var(--color-primary-hover)] hover:shadow-[var(--shadow-soft)]"
+        className="gap-2 border border-(--color-primary)/18 bg-(--color-surface)/70 px-6 font-semibold shadow-sm hover:-translate-y-0.5 hover:border-(--color-accent)/45 hover:bg-(--color-primary)/6 hover:text-(--color-primary-hover) hover:shadow-(--shadow-soft)"
       >
         <ExternalLink size={16} className="shrink-0" />
         ZnanyLekarz

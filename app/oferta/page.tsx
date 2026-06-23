@@ -16,10 +16,10 @@ export default async function OfferPage() {
     <>
       <Section>
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
             Oferta
           </p>
-          <h1 className="mt-4 font-[var(--font-display)] text-4xl font-semibold leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 font-(--font-display) text-4xl leading-tight text-(--color-primary) sm:text-5xl lg:text-6xl">
             Kompleksowa pomoc dla osób z bólem, po urazach i w przeciążeniu
           </h1>
         </div>

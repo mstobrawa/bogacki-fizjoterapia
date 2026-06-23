@@ -21,13 +21,13 @@ export default function AboutPage() {
             sizes="(min-width: 1280px) 500px, (min-width: 1024px) 44vw, calc(100vw - 88px)"
           />
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
               O mnie
             </p>
-            <h1 className="mt-4 font-[var(--font-display)] text-4xl font-semibold leading-tight text-[var(--color-primary)] sm:text-5xl">
+            <h1 className="mt-4 text-4xl font-semibold leading-tight text-(--color-primary) sm:text-5xl">
               Fizjoterapia oparta o uważność, edukację i realny plan
             </h1>
-            <p className="mt-6 text-lg leading-8 text-[var(--color-text-muted)]">
+            <p className="mt-6 text-lg leading-8 text-(--color-text-muted)">
               Nazywam się Piotr Bogacki i jestem absolwentem Śląskiego
               Uniwersytetu Medycznego na kierunku fizjoterapia. W obszarze moich
               zainteresowań zawodowych znajduje się przede wszystkim terapia

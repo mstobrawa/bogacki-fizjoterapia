@@ -5,11 +5,11 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-[var(--color-primary)] py-14 pb-28 text-white lg:pb-14">
+    <footer className="border-t border-white/10 bg-(--color-primary) py-14 pb-28 text-white lg:pb-14">
       <Container>
         <div className="grid gap-10 md:grid-cols-[1.35fr_1fr_1fr]">
           <div>
-            <p className="font-[var(--font-display)] text-3xl font-semibold">
+            <p className="font-(--font-display) text-3xl">
               Bogacki Fizjoterapia
             </p>
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/78">
@@ -17,7 +17,7 @@ export function Footer() {
               diagnostykę, jasny plan terapii i pracę z realnymi celami
               pacjenta.
             </p>
-            <div className="mt-7 h-px max-w-xs bg-gradient-to-r from-[var(--color-accent)]/70 to-transparent" />
+            <div className="mt-7 h-px max-w-xs bg-linear-to-r from-(--color-accent)/70 to-transparent" />
           </div>
           <div>
             <p className="text-sm font-semibold">Nawigacja</p>

@@ -26,7 +26,7 @@ export function PlaceholderImage({
 
   return (
     <div
-      className={`group relative ${ratio} overflow-hidden rounded-4xl border bg-[linear-gradient(145deg,#102133_0%,#163047_32%,#274761_68%,#3A5A73_100%)] shadow-[var(--shadow-premium)] ${className}`}
+      className={`group relative ${ratio} overflow-hidden rounded-4xl border bg-[linear-gradient(145deg,#102133_0%,#163047_32%,#274761_68%,#3A5A73_100%)] shadow-(--shadow-premium) ${className}`}
       aria-label={label}
       role="img"
     >
@@ -49,19 +49,19 @@ export function PlaceholderImage({
 
       <div className="absolute left-8 top-8 h-24 w-24 rounded-full border border-[rgba(244,239,234,0.14)] bg-[rgba(13,27,42,0.12)] blur-sm" />
 
-      <div className="absolute inset-6 rounded-3xl border border-[rgba(244,239,234,0.14)] bg-[rgba(13,27,42,0.12)] shadow-inner transition duration-500 ease-[var(--ease-premium)]" />
+      <div className="absolute inset-6 rounded-3xl border border-[rgba(244,239,234,0.14)] bg-[rgba(13,27,42,0.12)] shadow-inner transition duration-500 ease-(--ease-premium)" />
 
       <div className="absolute right-8 top-10 h-36 w-24 rounded-full bg-[rgba(184,115,77,0.16)] blur-2xl" />
 
       {!src && (
         <div className="absolute bottom-6 left-6 right-6 rounded-3xl border border-[rgba(244,239,234,0.25)] bg-[rgba(255,255,255,0.92)] p-5 shadow-sm backdrop-blur">
-          <div className="mb-3 h-1 w-12 rounded-full bg-[var(--color-accent)]" />
+          <div className="mb-3 h-1 w-12 rounded-full bg-(--color-accent)" />
 
-          <p className="text-sm font-semibold text-[var(--color-primary)]">
+          <p className="text-sm font-semibold text-(--color-primary)">
             {label}
           </p>
 
-          <p className="mt-1 text-xs leading-5 text-[var(--color-text-muted)]">
+          <p className="mt-1 text-xs leading-5 text-(--color-text-muted)">
             Elegancki placeholder pod docelowe zdjęcie gabinetu
           </p>
         </div>

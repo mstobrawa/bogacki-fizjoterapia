@@ -13,10 +13,14 @@ const initialState = {
 const inputClass =
   "min-h-11 rounded-2xl border border-[var(--color-border)] bg-white px-4 text-sm outline-none transition focus:border-[var(--color-primary)]";
 
-const labelClass = "grid gap-2 text-sm font-semibold text-[var(--color-primary)]";
+const labelClass =
+  "grid gap-2 text-sm font-semibold text-[var(--color-primary)]";
 
 export function ContactForm() {
-  const [state, action, pending] = useActionState(sendContactMessage, initialState);
+  const [state, action, pending] = useActionState(
+    sendContactMessage,
+    initialState,
+  );
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -36,7 +40,7 @@ export function ContactForm() {
           action(formData);
         });
       }}
-      className="grid w-full max-w-[38rem] gap-3.5 rounded-[1.5rem] border border-[var(--color-border)] bg-white/95 p-4 shadow-sm ring-1 ring-[var(--color-primary)]/5 sm:p-5"
+      className="grid w-full max-w-152 gap-3.5 rounded-3xl border border-(--color-border) bg-white/95 p-4 shadow-sm ring-1 ring-(--color-primary)/5 sm:p-5"
     >
       <div className="hidden">
         <label>
@@ -47,17 +51,33 @@ export function ContactForm() {
 
       <label className={labelClass}>
         Imię
-        <input required name="name" autoComplete="given-name" className={inputClass} />
+        <input
+          required
+          name="name"
+          autoComplete="given-name"
+          className={inputClass}
+        />
       </label>
 
       <div className="grid gap-3 sm:grid-cols-2">
         <label className={labelClass}>
           Email
-          <input required name="email" type="email" autoComplete="email" className={inputClass} />
+          <input
+            required
+            name="email"
+            type="email"
+            autoComplete="email"
+            className={inputClass}
+          />
         </label>
         <label className={labelClass}>
           Telefon
-          <input name="phone" type="tel" autoComplete="tel" className={inputClass} />
+          <input
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            className={inputClass}
+          />
         </label>
       </div>
 
@@ -67,15 +87,18 @@ export function ContactForm() {
           required
           name="message"
           rows={4}
-          className="min-h-28 resize-y rounded-2xl border border-[var(--color-border)] bg-white px-4 py-3 text-sm leading-6 outline-none transition focus:border-[var(--color-primary)]"
+          className="min-h-28 resize-y rounded-2xl border border-(--color-border) bg-white px-4 py-3 text-sm leading-6 outline-none transition focus:border-(--color-primary)"
         />
       </label>
 
-      <label className="flex items-start gap-3 text-sm leading-6 text-[var(--color-text-muted)]">
+      <label className="flex items-start gap-3 text-sm leading-6 text-(--color-text-muted)">
         <input required name="privacy" type="checkbox" className="mt-1" />
         <span>
           Zapoznałem się z{" "}
-          <Link href="/prywatnosc" className="font-semibold text-[var(--color-primary)] underline-offset-4 hover:underline">
+          <Link
+            href="/prywatnosc"
+            className="font-semibold text-(--color-primary) underline-offset-4 hover:underline"
+          >
             polityką prywatności
           </Link>
           .
@@ -86,8 +109,8 @@ export function ContactForm() {
         <p
           className={`rounded-2xl px-4 py-3 text-sm leading-6 ${
             state.ok
-              ? "bg-[var(--color-soft)] text-[var(--color-primary)]"
-              : "bg-[var(--color-accent)]/10 text-[var(--color-primary)]"
+              ? "bg-(--color-soft) text-(--color-primary)"
+              : "bg-(--color-accent)/10 text-(--color-primary)"
           }`}
           role="status"
         >
@@ -95,7 +118,11 @@ export function ContactForm() {
         </p>
       ) : null}
 
-      <Button type="submit" disabled={pending} className="min-h-11 justify-self-start px-6">
+      <Button
+        type="submit"
+        disabled={pending}
+        className="min-h-11 justify-self-start px-6"
+      >
         {pending ? "Wysyłanie..." : "Wyślij wiadomość"}
       </Button>
     </form>

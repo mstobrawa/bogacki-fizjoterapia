@@ -13,7 +13,11 @@ export const metadata: Metadata = {
 
 export default async function AdminPage() {
   const { supabase, user } = await requireAdmin();
-  const [{ count: servicesCount }, { count: postsCount }, { count: certificatesCount }] = await Promise.all([
+  const [
+    { count: servicesCount },
+    { count: postsCount },
+    { count: certificatesCount },
+  ] = await Promise.all([
     supabase.from("services").select("id", { count: "exact", head: true }),
     supabase.from("posts").select("id", { count: "exact", head: true }),
     supabase.from("certificates").select("id", { count: "exact", head: true }),
@@ -34,9 +38,14 @@ export default async function AdminPage() {
       >
         <div className="grid gap-5 md:grid-cols-3">
           {stats.map((item) => (
-            <div key={item.label} className="rounded-[1.5rem] border border-[var(--color-border)] bg-white p-5 shadow-sm">
-              <p className="text-sm font-semibold text-[var(--color-text-muted)]">{item.label}</p>
-              <p className="mt-3 font-[var(--font-display)] text-4xl font-semibold text-[var(--color-primary)]">
+            <div
+              key={item.label}
+              className="rounded-3xl border border-(--color-border) bg-white p-5 shadow-sm"
+            >
+              <p className="text-sm font-semibold text-(--color-text-muted)">
+                {item.label}
+              </p>
+              <p className="mt-3 font-(--font-display) text-4xl text-(--color-primary)">
                 {item.value}
               </p>
             </div>
@@ -47,10 +56,12 @@ export default async function AdminPage() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-[1.5rem] border border-[var(--color-border)] bg-white p-5 text-[var(--color-primary)] shadow-sm transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
+              className="rounded-3xl border border-(--color-border) bg-white p-5 text-(--color-primary) shadow-sm transition hover:-translate-y-0.5 hover:shadow-(--shadow-card)"
             >
               <p className="text-lg font-semibold">{item.label}</p>
-              <p className="mt-2 text-sm leading-6 text-[var(--color-text-muted)]">Przejdź do zarządzania sekcją.</p>
+              <p className="mt-2 text-sm leading-6 text-(--color-text-muted)">
+                Przejdź do zarządzania sekcją.
+              </p>
             </a>
           ))}
         </div>

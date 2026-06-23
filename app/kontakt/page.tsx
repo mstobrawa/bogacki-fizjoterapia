@@ -17,13 +17,13 @@ export default function ContactPage() {
     <Section>
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-primary)]">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-(--color-primary)">
             Kontakt
           </p>
-          <h1 className="mt-4 text-4xl font-semibold leading-tight text-[var(--color-primary)] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-4xl font-semibold leading-tight text-(--color-primary) sm:text-5xl lg:text-6xl">
             Umów wizytę lub zapytaj o terapię
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--color-text-muted)]">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-(--color-text-muted)">
             Krótko opisz problem, czas trwania dolegliwości i cel wizyty. To
             pomoże dobrać pierwszy krok terapii.
           </p>
@@ -32,20 +32,20 @@ export default function ContactPage() {
         <div className="mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1fr)] lg:gap-12">
           <div className="grid gap-6">
             <ContactForm />
-            <div className="grid gap-3 rounded-[1.35rem] border border-[var(--color-border)] bg-white/90 p-4 text-sm shadow-sm">
+            <div className="grid gap-3 rounded-[1.35rem] border border-(--color-border) bg-white/90 p-4 text-sm shadow-sm">
               <a
-                className="flex items-center gap-3 text-[var(--color-primary)] transition hover:text-[var(--color-accent)]"
+                className="flex items-center gap-3 text-(--color-primary) transition hover:text-(--color-accent)"
                 href="tel:+48505476614"
               >
                 <Phone size={18} /> +48 505 476 614
               </a>
               <a
-                className="flex items-center gap-3 text-[var(--color-primary)] transition hover:text-[var(--color-accent)]"
+                className="flex items-center gap-3 text-(--color-primary) transition hover:text-(--color-accent)"
                 href="mailto:bogackipiotr13@gmail.com"
               >
                 <Mail size={18} /> bogackipiotr13@gmail.com
               </a>
-              <p className="flex items-center gap-3 text-[var(--color-primary)]">
+              <p className="flex items-center gap-3 text-(--color-primary)">
                 <MapPin size={18} /> Generała Zygmunta Waltera-Jankego 275,
                 Katowice
               </p>
@@ -54,13 +54,13 @@ export default function ContactPage() {
           </div>
 
           <div className="grid gap-5">
-            <div className="overflow-hidden rounded-[1.75rem] border border-white/70 bg-white shadow-[var(--shadow-card)] ring-1 ring-[var(--color-primary)]/5">
+            <div className="overflow-hidden rounded-[1.75rem] border border-white/70 bg-white shadow-(--shadow-card) ring-1 ring-(--color-primary)/5">
               <iframe
                 title="Mapa dojazdu do gabinetu Bogacki Fizjoterapia"
                 src={mapSrc}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="h-[18rem] w-full border-0 sm:h-[22rem] lg:h-[24rem]"
+                className="h-72 w-full border-0 sm:h-88 lg:h-96"
               />
             </div>
           </div>

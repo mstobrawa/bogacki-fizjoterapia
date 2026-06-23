@@ -71,15 +71,15 @@ export function Testimonials() {
               key={testimonial.initials}
               className="min-w-0 flex-[0_0_88%] pl-5 md:flex-[0_0_47%] lg:flex-[0_0_31.5%]"
             >
-              <article className="relative rounded-[1.75rem] border border-[var(--color-border)] bg-white p-7 shadow-[var(--shadow-card)] ring-1 ring-[var(--color-primary)]/5">
+              <article className="relative rounded-[1.75rem] border border-(--color-border) bg-white p-7 shadow-(--shadow-card) ring-1 ring-(--color-primary)/5">
                 <Quote
-                  className="absolute right-7 top-7 text-[var(--color-surface)]"
+                  className="absolute right-7 top-7 text-(--color-surface)"
                   size={38}
                   fill="currentColor"
                   aria-hidden="true"
                 />
                 <div
-                  className="flex gap-1 text-[var(--color-primary)]"
+                  className="flex gap-1 text-(--color-primary)"
                   role="img"
                   aria-label="Ocena 5 na 5"
                 >
@@ -92,11 +92,11 @@ export function Testimonials() {
                     />
                   ))}
                 </div>
-                <p className="mt-6 text-base leading-8 text-[var(--color-text)]">
+                <p className="mt-6 text-base leading-8 text-(--color-text)">
                   “{testimonial.text}”
                 </p>
-                <div className="mt-7 border-t border-[var(--color-border)] pt-5">
-                  <span className="inline-flex items-center rounded-full bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-[var(--color-surface)] shadow-sm">
+                <div className="mt-7 border-t border-(--color-border) pt-5">
+                  <span className="inline-flex items-center rounded-full bg-(--color-primary) px-4 py-2 text-sm font-semibold text-(--color-surface) shadow-sm">
                     {testimonial.initials}
                   </span>
                 </div>

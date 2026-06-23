@@ -11,7 +11,7 @@ export async function CertificatesCarousel() {
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/75">
           Certyfikaty
         </p>
-        <h2 className="mt-4 font-[var(--font-display)] text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+        <h2 className="mt-4 font-(--font-display) text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
           Stały rozwój i sprawdzone metody pracy
         </h2>
       </div>
