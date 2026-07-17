@@ -19,7 +19,7 @@ export function Hero() {
         <div className="max-w-2xl">
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-(--color-primary) bg-white px-4 py-2 text-sm font-semibold text-(--color-primary) shadow-sm">
             <span className="size-2 rounded-full bg-(--color-accent)" />
-            Fizjoterapia w Katowicach i Mysłowicach
+            Fizjoterapia w Katowicach i Mikołowie
           </p>
           <h1 className="font-(--font-display) text-[2.75rem] leading-[1.03] text-(--color-primary) sm:text-6xl lg:text-7xl">
             Bogacki Fizjoterapia - skuteczna{" "}

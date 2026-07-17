@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Nowoczesna fizjoterapia w Katowicach i Mysłowicach. Diagnostyka, terapia manualna i indywidualny plan leczenia pomagający wrócić do sprawności.",
+    "Nowoczesna fizjoterapia w Katowicach i Mikołowie. Diagnostyka, terapia manualna i indywidualny plan leczenia pomagający wrócić do sprawności.",
 
   keywords: [
     "fizjoterapia Katowice",
     "fizjoterapeuta Katowice",
     "rehabilitacja Katowice",
-    "fizjoterapia Mysłowice",
+    "fizjoterapia Mikołów",
     "terapia manualna",
     "kinesiotaping",
     "masaż relaksacyjny",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Bogacki Fizjoterapia | Skuteczna pomoc w bólu",
 
     description:
-      "Nowoczesna fizjoterapia w Katowicach i Mysłowicach. Umów wizytę i wróć do sprawności.",
+      "Nowoczesna fizjoterapia w Katowicach i Mikołowie. Umów wizytę i wróć do sprawności.",
 
     url: "https://bogackifizjoterapia.pl",
 
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     title: "Bogacki Fizjoterapia | Skuteczna pomoc w bólu",
 
     description:
-      "Nowoczesna fizjoterapia w Katowicach i Mysłowicach. Umów wizytę i wróć do sprawności.",
+      "Nowoczesna fizjoterapia w Katowicach i Mikołowie. Umów wizytę i wróć do sprawności.",
 
     images: ["/opengraph-image.png"],
   },
