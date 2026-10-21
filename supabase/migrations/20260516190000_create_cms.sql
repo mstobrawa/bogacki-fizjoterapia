@@ -128,3 +128,26 @@ create policy "Authenticated admins can manage certificate images"
   to authenticated
   using (bucket_id = 'certificate-images' and public.is_admin())
   with check (bucket_id = 'certificate-images' and public.is_admin());
+
+
+-- Data API grants for CMS tables
+
+GRANT SELECT ON public.services TO anon;
+GRANT SELECT ON public.posts TO anon;
+GRANT SELECT ON public.certificates TO anon;
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON public.services TO authenticated;
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON public.posts TO authenticated;
+
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON public.certificates TO authenticated;
+
+GRANT SELECT ON public.admin_users TO authenticated;
+
+GRANT ALL PRIVILEGES ON public.services TO service_role;
+GRANT ALL PRIVILEGES ON public.posts TO service_role;
+GRANT ALL PRIVILEGES ON public.certificates TO service_role;
+GRANT ALL PRIVILEGES ON public.admin_users TO service_role;
